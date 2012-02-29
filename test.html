@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Improve HTML Heading Layout with jQuery</title>
+
+<style>
+body { margin: 0; padding: 0; }
+div { width: 350px; }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="JoinLastTwoWords.js"></script>
+<script>
+$(document).ready(function()
+{
+	/*
+	 * EXAMPLE: Join the last two words of the text wrapped in <h1> or <h2> tags,
+	 * but don't join the text of <h2> tags with the class no-join
+	 */
+	joinLastTwoWordsOfElement('h1, h2', 'h2.no-join');
+});
+</script>
+</head>
+
+<body>
+<div>
+<h1>Now is the winter of our discontent</h1>
+<h2>The owl and the pussy cat went to sea</h2>
+<h2 class="no-join">The owl and the pussy cat went to sea</h2>
+</div>
+</body>
+
+</html>

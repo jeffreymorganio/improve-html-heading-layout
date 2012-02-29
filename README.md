@@ -4,7 +4,7 @@ JoinLastTwoWords.js
 About
 -----
 
-The joinLastTwoWordsOfElement function uses jQuery to replace the last space character in the selected HTML elements with the non-breaking space entity (&ampnbsp;).
+The joinLastTwoWordsOfElement function uses jQuery to replace the last space character in the selected HTML elements with the non-breaking space entity (`&nbsp;`).
 
 Example
 -------
@@ -29,7 +29,7 @@ you can ensure two words will wrap to the next line with the following call:
 
     joinLastTwoWordsOfElement('h1');
 
-See test.html for more examples.
+See `test.html` for more examples.
 
 More Information
 ----------------

@@ -34,7 +34,4 @@ See `test.html` for more examples.
 More Information
 ----------------
 
-Read the following article for more information:
-
-How to Improve HTML Heading Layout with jQuery
-[http://usabilityetc.com/2010/07/improve-html-heading-layout-with-jquery/](http://usabilityetc.com/2010/07/improve-html-heading-layout-with-jquery/)
+For more information, please read [How to Improve HTML Heading Layout with jQuery](http://usabilityetc.com/2010/07/improve-html-heading-layout-with-jquery/).

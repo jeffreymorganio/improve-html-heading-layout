@@ -1,5 +1,5 @@
 /*
- * JoinLastTwoWords.js
+ * join-last-two-words.js
  *
  * by Jeffrey Morgan
  * http://usabilityetc.com/
@@ -13,8 +13,35 @@
  *
  */
 
-function joinLastTwoWords(s)
-{
+function joinLastTwoWordsOfElement(selector, exclusions) {
+	if (!shouldJoinLastTwoWords()) return;
+
+	// The exclusions parameter is optional
+	if (exclusions == null) {
+		exclusions = '';
+	}
+		
+	// Loop through each HTML element that matches the selector
+	$(selector).not(exclusions).each(function() {
+		// Get the text marked-up in the currently selected HTML element
+		var html = $(this).html();
+			
+		// Join the last two words of the element's text 
+		$(this).html(joinLastTwoWords(html));
+				
+	});
+}
+
+function shouldJoinLastTwoWords() {
+	return (!iPhoneScreen());
+}
+
+function iPhoneScreen() {
+	var windowWidth = $(window).width();
+	return (windowWidth >= 320 && windowWidth <= 480);
+}
+
+function joinLastTwoWords(s) {
 	// Get the position in the string of the last space
 	var pos = s.lastIndexOf(' ');
 			
@@ -40,22 +67,4 @@ function joinLastTwoWords(s)
 		
 	// Return the string with the last two words joined
 	return s;
-}
-
-function joinLastTwoWordsOfElement(selector, exclusions)
-{
-	// The exclusions parameter is optional
-	if (exclusions == null) {
-		exclusions = '';
-	}
-		
-	// Loop through each HTML element that matches the selector
-	$(selector).not(exclusions).each(function() {
-		// Get the text marked-up in the currently selected HTML element
-		var html = $(this).html();
-			
-		// Join the last two words of the element's text 
-		$(this).html(joinLastTwoWords(html));
-				
-	});
 }
